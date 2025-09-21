@@ -1,24 +1,23 @@
-package com.projects.ClientsDatabaseApp.service;
+package com.projects.ClientsDatabaseApp.service.mongo;
 
-import com.projects.ClientsDatabaseApp.model.Client;
+import com.projects.ClientsDatabaseApp.model.ClientMongo;
 
 import java.util.List;
 
-public interface ClientService {
-
+public interface ClientServiceMongo {
     /**
      * Create a new client
      *
-     * @param client client to create
+     * @param ClientMongo client to create
      */
-    void createClient(Client client);
+    void createClient(ClientMongo ClientMongo);
 
     /**
      * Return a list of all existing clients
      *
      * @return list of clients
      */
-    List<Client> getAllClients();
+    List<ClientMongo> getAllClients();
 
     /**
      * Return the client by its ID
@@ -26,17 +25,17 @@ public interface ClientService {
      * @param id client's id
      * @return client
      */
-    Client getClientById(int id);
+    ClientMongo getClientById(int id);
 
     /**
      * Update the client with the given ID,
      * according to the client's transferred ID
      *
-     * @param client the client according to which the data should be updated
+     * @param ClientMongo the client according to which the data should be updated
      * @param id     client's id
      * @return true if the client has been updates, otherwise false
      */
-    boolean updateClient(Client client, int id);
+    boolean updateClient(ClientMongo ClientMongo, int id);
 
     /**
      * Delete the client with the given ID,
